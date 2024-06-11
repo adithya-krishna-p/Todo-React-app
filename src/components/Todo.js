@@ -6,26 +6,29 @@ import { Listtasks } from './Listtasks'
 export const Todo = () => {
   const [tasks, setTasks] = useState(
     [
-      {title: "learn Html"},
-      {title: "learn css"},
-      {title: "learn javascript"}
+      ""
     ]
-  )
+  );
+
+  const AddTask = (title) => {
+    const  newTask = [...tasks, {title}]
+    setTasks(newTask);
+  };  
   return (
     
     <div className='Todo-container'>
       <div className='header'>Todo App</div>
       <div className='addtask'>
-        <Addtask />
+        <Addtask AddTask={AddTask} />
       </div>
       <div className='tasks'>
       {
-        tasks.map((task)=>(
-          <Listtasks task={task} /> 
+        tasks.map((task, index)=>(
+          <Listtasks task={task} removeTask={removetask} index={index} key={index} /> 
         ))
       }
         
       </div>
     </div>
-  )
+  ) 
 }

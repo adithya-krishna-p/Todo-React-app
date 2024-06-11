@@ -1,13 +1,15 @@
 import React from 'react'
+import { Addtask } from './Addtask'
 
-export const Listtasks = () => {
+const Listtasks = ({task, index, removetask}) => {
   return (
     <>
     <div className='List-tasks'>
-    Task Name
-      <button className='delete-btn'>Delete</button>
+      <button onClick={()=> {removeTask(index)}} className='delete-btn'>Delete</button>
     </div>
     </>
     
   )
 }
+
+export default Listtasks;

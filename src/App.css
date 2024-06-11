@@ -1,6 +1,9 @@
+* {
+  background-color: #61dafb;
+}
+
 .App {
   text-align: center;
-  background-color: #61dafb;
   margin: 0;
   padding: 0;
   display: flex;
@@ -19,7 +22,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #155ae4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
