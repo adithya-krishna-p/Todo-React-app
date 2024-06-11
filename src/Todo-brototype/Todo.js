@@ -22,23 +22,38 @@ const Todo = () => {
                 </div>
              
               <div className="todos">
-                  { toDos.map((value)=> {
+                  { toDos.map((obj)=> {
 
                     return (
                    <div className="todo">
                         <div className="left">
                             <input onChange={(e)=>{
                                 console.log(e.target.value)
-                                console.log(value)
+                                console.log(obj)
+                                setToDos(toDos.filter(obj2=>{
+                                    if(obj2.id===obj.id){
+                                        obj2.status=e.target.checked
+                                    }
+                                    <h1>Active tasks</h1>
+                                    return obj2
+                            }))
+                                
 
-                            }}
-                            value={value.status} type="checkbox" name="" id="" />
-                            <p>{value.text}</p>
+                            }} value={obj.status} type="checkbox" name="" id="" />
+                            <p>{obj.text}</p>
                         </div>
                         <div className="right">
                             <i className="fas fa-times"></i>
                         </div>
                     </div> )}) }
+
+                    {toDos.map((obj)=>{
+                        if(obj.status){
+                            return(<h1>{obj.text}</h1>)
+
+                        }
+                        return(<h1>Active tasks</h1>)
+                    })}
                     
                 </div>
             </div>
@@ -46,4 +61,4 @@ const Todo = () => {
     )
 }
 
-export default Todo
+export default Todo;
