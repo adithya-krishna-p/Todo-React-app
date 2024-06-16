@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../components/Todoo.css'
+import './Todoo.css'
 
 export const Addtask = ({AddTask}) => {
     const [value, setValue] = useState('');

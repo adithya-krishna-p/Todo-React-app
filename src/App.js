@@ -1,16 +1,17 @@
 
 // import './App.css';
-import Todo from './Todo-brototype/Todo';
+import todo from './components/Todoapp/Todo'
+
 
 
 function App() {
   return (
     <>
-    <div className="App">
-    <Todo />
-    </div>
+      <div className="App">
+        <todo />
+      </div>
     </>
-    
+
   );
 }
 
