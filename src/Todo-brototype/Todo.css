@@ -85,3 +85,15 @@
     font-style: normal;
     color: grey;
   }
+
+
+  .activetasks {
+    text-decoration:underline;
+  }
+
+
+.listtasks {
+  position: relative;
+  left: 500px;
+  bottom: 200px;
+}

@@ -34,7 +34,7 @@ const Todo = () => {
                                     if(obj2.id===obj.id){
                                         obj2.status=e.target.checked
                                     }
-                                    <h1>Active tasks</h1>
+                                    
                                     return obj2
                             }))
                                 
@@ -47,13 +47,29 @@ const Todo = () => {
                         </div>
                     </div> )}) }
 
+                    return(<h1 className='activetasks'>Active tasks</h1>)
+
+
                     {toDos.map((obj)=>{
                         if(obj.status){
                             return(<h1>{obj.text}</h1>)
 
                         }
-                        return(<h1>Active tasks</h1>)
                     })}
+
+
+                    <div  className='listtasks'>
+                    <h1>Active tasks</h1>
+                    
+                        {toDos.map((obj)=>{
+                        if(obj.status){
+                            return(<h1>{obj.text}</h1>)
+
+                        }
+                    })}
+                      
+                    </div>
+                    
                     
                 </div>
             </div>

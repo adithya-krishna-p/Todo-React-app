@@ -1,6 +1,7 @@
 
 // import './App.css';
-import todo from './components/Todoapp/Todo'
+import React from 'react';
+import Todo from './Todo-brototype/Todo.js';
 
 
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <todo />
+        <Todo />
       </div>
     </>
 

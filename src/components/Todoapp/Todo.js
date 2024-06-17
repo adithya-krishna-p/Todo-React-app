@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Todoo.css'
-import { Addtask } from './Addtask'
-import Listtasks from './Listtasks'
+import {Addtask} from './Addtask'
+import {Listtasks} from './Listtasks'
 
 export const Todo = () => {
   const [tasks, setTasks] = useState(
@@ -25,7 +25,7 @@ export const Todo = () => {
       </div>
       <div className='tasks'>
         {
-          tasks.map((task, index) => (
+          tasks.map((task) => (
             <Listtasks task={task}/>
           ))
         }

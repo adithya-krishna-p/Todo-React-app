@@ -5,7 +5,7 @@ const Listtasks = ({tasks}) => {
   return (
     <>
       <div className='List-tasks'>
-      {title.tasks}
+      {tasks}
         <button className='delete-btn'>Delete</button>
       </div>
     </>
